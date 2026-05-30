@@ -385,10 +385,15 @@ import '../styles/global.css';
 <script>
   // Form submit
   const ctaForm = document.getElementById('ctaForm') as HTMLFormElement;
-  ctaForm?.addEventListener('submit', (e) => {
+  ctaForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = ctaForm.querySelector('button') as HTMLButtonElement;
     const inp = ctaForm.querySelector('input') as HTMLInputElement;
+    const data = new FormData();
+    data.append('email', inp.value.trim());
+    try {
+      await fetch('/contact.php', { method: 'POST', body: data });
+    } catch (_) {}
     btn.textContent = "You're on the list!";
     btn.disabled = true;
     inp.disabled = true;

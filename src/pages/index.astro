@@ -422,10 +422,15 @@ import '../styles/global.css';
   // Waitlist form
   const form = document.getElementById('wlForm');
   const succ = document.getElementById('wlSuccess');
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     const email = document.getElementById('wlEmail').value.trim();
     if (!email) return;
+    const data = new FormData();
+    data.append('email', email);
+    try {
+      await fetch('/contact.php', { method: 'POST', body: data });
+    } catch (_) {}
     form.style.display = 'none';
     succ.classList.add('wl-success-show');
   });
