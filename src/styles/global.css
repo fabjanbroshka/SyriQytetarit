@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+/* Ensure smooth scroll on html */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove default tap highlight on mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}

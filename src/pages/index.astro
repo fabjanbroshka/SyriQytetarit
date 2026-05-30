@@ -1,0 +1,1307 @@
+---
+import '../styles/global.css';
+---
+
+<html lang="sq">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Syri Qytetarit — Një platformë e re qytetare për raportimin e problemeve urbane. Regjistrohu për të qenë ndër të parët." />
+  <meta name="theme-color" content="#020617" />
+  <title>Syri Qytetarit — Shiko. Raporto. Ndrysho.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ════════════════════ HEADER ════════════════════ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-container">
+    <a class="header-logo" href="/">
+      <img src="/logo.png" alt="Syri Qytetarit" class="logo-img" />
+      <span class="logo-text">Syri Qytetarit</span>
+    </a>
+
+    <nav class="header-nav">
+      <a href="#hero" class="nav-link">Kryefaqja</a>
+      <a href="#si-funksionon" class="nav-link">Si funksionon</a>
+      <a href="#rreth-projektit" class="nav-link">Rreth projektit</a>
+      <a href="#lista-pritjes" class="nav-link nav-cta">Lista e pritjes</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Hap menunë" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#hero" class="mobile-nav-link">Kryefaqja</a>
+    <a href="#si-funksionon" class="mobile-nav-link">Si funksionon</a>
+    <a href="#rreth-projektit" class="mobile-nav-link">Rreth projektit</a>
+    <a href="#lista-pritjes" class="mobile-nav-link mobile-nav-cta">Lista e pritjes</a>
+  </div>
+</header>
+
+
+<!-- ════════════════════ HERO ════════════════════ -->
+<section class="hero-section" id="hero">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+    <div class="hero-vignette"></div>
+  </div>
+
+  <div class="hero-container">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Lançimi zyrtar po afrohet.
+      </div>
+
+      <h1 class="hero-title">
+        Qyteti ka<br/>
+        <span class="hero-title-accent">nevojë</span> për<br/>
+        sytë e qytetarëve.
+      </h1>
+
+      <p class="hero-subtitle">
+        Një platformë e re po vjen për të ndihmuar qytetarët të raportojnë problemet urbane në mënyrë të thjeshtë, të shpejtë dhe të strukturuar.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#lista-pritjes" class="btn-primary-hero">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Më njofto kur lançohet
+        </a>
+        <a href="#si-funksionon" class="btn-secondary-hero">
+          Shiko më shumë
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="12" x2="17" y2="12"/><polyline points="12 7 17 12 12 17"/></svg>
+        </a>
+      </div>
+
+      <div class="hero-stores">
+        <!-- Apple App Store — premium glassmorphic badge -->
+        <div class="store-badge store-badge-apple">
+          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="appleChrome" x1="10%" y1="0%" x2="80%" y2="100%">
+                <stop offset="0%"   stop-color="#f4f4f4"/>
+                <stop offset="30%"  stop-color="#e0e0e0"/>
+                <stop offset="58%"  stop-color="#b8b8b8"/>
+                <stop offset="80%"  stop-color="#909090"/>
+                <stop offset="100%" stop-color="#c8c8c8"/>
+              </linearGradient>
+            </defs>
+            <path fill="url(#appleChrome)" d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.37 2.73zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </svg>
+          <div>
+            <span class="store-sub">Coming soon on</span>
+            <span class="store-name store-name-apple">App Store</span>
+          </div>
+        </div>
+        <!-- Google Play — premium glassmorphic badge -->
+        <div class="store-badge store-badge-gplay">
+          <img src="/googleplay.png" alt="Google Play" class="gplay-icon" />
+          <div>
+            <span class="store-sub">Coming soon on</span>
+            <span class="store-name store-name-gplay">Google Play</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desktop right visual -->
+    <div class="hero-visual">
+      <div class="city-card">
+        <div class="city-card-hdr">
+          <div class="city-card-logo-row">
+            <img src="/logo.png" alt="Syri Qytetarit" class="card-logo-img" />
+            <span>Syri Qytetarit</span>
+          </div>
+          <div class="live-chip">
+            <span class="live-dot"></span>Live
+          </div>
+        </div>
+
+        <div class="city-map">
+          <div class="cmap-grid"></div>
+          <div class="cmap-road-h" style="top:34%"></div>
+          <div class="cmap-road-h" style="top:62%"></div>
+          <div class="cmap-road-v" style="left:28%"></div>
+          <div class="cmap-road-v" style="left:64%"></div>
+          <div class="cmap-block" style="top:6%;left:4%;width:21%;height:25%"></div>
+          <div class="cmap-block" style="top:6%;left:32%;width:28%;height:25%"></div>
+          <div class="cmap-block" style="top:6%;left:67%;width:27%;height:25%"></div>
+          <div class="cmap-block cmap-block-hi" style="top:39%;left:4%;width:21%;height:19%"></div>
+          <div class="cmap-block" style="top:39%;left:32%;width:28%;height:19%"></div>
+          <div class="cmap-block" style="top:39%;left:67%;width:27%;height:19%"></div>
+          <div class="cmap-block" style="top:66%;left:4%;width:21%;height:28%"></div>
+          <div class="cmap-block" style="top:66%;left:32%;width:28%;height:28%"></div>
+          <div class="cmap-block" style="top:66%;left:67%;width:27%;height:28%"></div>
+          <!-- Pins -->
+          <div class="cmap-pin pin-blue" style="top:36%;left:46%">
+            <div class="pin-ring"></div>
+          </div>
+          <div class="cmap-pin pin-amber" style="top:18%;left:30%"></div>
+          <div class="cmap-pin pin-green" style="top:70%;left:72%"></div>
+          <div class="cmap-pin pin-violet" style="top:54%;left:18%"></div>
+          <div class="scan-line"></div>
+        </div>
+
+        <div class="city-stats">
+          <div class="cstat">
+            <span class="cstat-n">247</span>
+            <span class="cstat-l">Raporte</span>
+          </div>
+          <div class="cstat-sep"></div>
+          <div class="cstat">
+            <span class="cstat-n">89%</span>
+            <span class="cstat-l">Zgjidhura</span>
+          </div>
+          <div class="cstat-sep"></div>
+          <div class="cstat">
+            <span class="cstat-n">12</span>
+            <span class="cstat-l">Zona aktive</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-card fc-top">
+        <div class="fc-dot" style="background:#ef4444"></div>
+        <div>
+          <p class="fc-title">Parkim i pahijshëm</p>
+          <p class="fc-meta">Rr. Myslym Shyri · 2 min</p>
+        </div>
+      </div>
+      <div class="float-card fc-bot">
+        <div class="fc-dot" style="background:#10b981"></div>
+        <div>
+          <p class="fc-title">Problem i zgjidhur!</p>
+          <p class="fc-meta">Bul. Zogu I · Tani</p>
+        </div>
+      </div>
+      <div class="visual-glow"></div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-bar"></div>
+  </div>
+</section>
+
+
+<!-- ════════════════════ TEASER ════════════════════ -->
+<section class="teaser-section" id="teaser">
+  <div class="wrap">
+    <div class="teaser-inner">
+      <div class="eyebrow-chip">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        Platforma Qytetare
+      </div>
+      <h2 class="teaser-title">
+        Një mënyrë e re për të reaguar<br class="hide-mob"/>
+        ndaj problemeve të qytetit.
+      </h2>
+      <p class="teaser-body">
+        Syri Qytetarit është një platformë që synon të kthejë shqetësimet e përditshme në raportime të strukturuara, me qëllim përmirësimin e hapësirave publike dhe rritjen e përgjegjësisë qytetare.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════ HOW IT WORKS ════════════════════ -->
+<section class="how-section" id="si-funksionon">
+  <div class="wrap">
+    <header class="sec-hdr">
+      <div class="eyebrow-chip">Si funksionon</div>
+      <h2 class="sec-title">E thjeshtë. E shpejtë.<br/>E menduar për qytetarët.</h2>
+    </header>
+
+    <div class="how-grid">
+      <div class="how-card reveal-card" style="--ri:0">
+        <div class="how-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <span class="how-num">01</span>
+        <h3 class="how-card-title">Shiko problemin</h3>
+        <p class="how-card-body">Një parkim i gabuar, ndotje, bllokim trotuari apo një problem tjetër urban.</p>
+      </div>
+
+      <div class="how-card how-card-feat reveal-card" style="--ri:1">
+        <div class="how-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82 19.79 19.79 0 01.12 1.18 2 2 0 012.1 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91A16 16 0 0014 15.91l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <span class="how-num">02</span>
+        <h3 class="how-card-title">Raporto në pak sekonda</h3>
+        <p class="how-card-body">Përdor aplikacionin për të dërguar një raportim të thjeshtë dhe të qartë.</p>
+      </div>
+
+      <div class="how-card reveal-card" style="--ri:2">
+        <div class="how-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <span class="how-num">03</span>
+        <h3 class="how-card-title">Ndihmo qytetin të ndryshojë</h3>
+        <p class="how-card-body">Raportimet ndihmojnë në krijimin e një sistemi më të organizuar dhe më transparent.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════ WHY / HUMAN VALUES ════════════════════ -->
+<section class="why-section" id="rreth-projektit">
+  <div class="wrap">
+    <div class="why-inner reveal-why">
+      <div class="why-left">
+        <div class="eyebrow-chip">Pse ekziston</div>
+        <h2 class="sec-title why-title">Pse po krijohet<br/>Syri Qytetarit?</h2>
+      </div>
+      <div class="why-right">
+        <p class="why-p">
+          Pas Syri Qytetarit qëndron një ide e thjeshtë, por e rëndësishme: <strong>qytetet bëhen më të mira kur qytetarët kanë mundësi të dëgjohen dhe të veprojnë.</strong>
+        </p>
+        <p class="why-p">
+          Ky projekt lindi nga nevoja për më shumë rregull, më shumë përgjegjësi dhe më shumë kujdes ndaj hapësirave publike që përdorim çdo ditë.
+        </p>
+        <p class="why-p">
+          Syri Qytetarit synon të lidhë teknologjinë me vlerat qytetare: respektin, bashkëpunimin, përgjegjësinë dhe dëshirën për një qytet më të mirë.
+        </p>
+        <div class="why-tags">
+          <span class="why-tag"><span class="wt-dot"></span>Respekt</span>
+          <span class="why-tag"><span class="wt-dot"></span>Bashkëpunim</span>
+          <span class="why-tag"><span class="wt-dot"></span>Përgjegjësi</span>
+          <span class="why-tag"><span class="wt-dot"></span>Progres</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════ FOR WHO ════════════════════ -->
+<section class="forwho-section" id="per-ke">
+  <div class="wrap">
+    <header class="sec-hdr">
+      <div class="eyebrow-chip">Audienca</div>
+      <h2 class="sec-title">Për kë është?</h2>
+    </header>
+
+    <div class="forwho-grid">
+      <div class="forwho-card reveal-card" style="--ri:0">
+        <div class="fw-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <h3 class="fw-title">Për qytetarët aktivë</h3>
+        <p class="fw-body">Për ata që duan të kontribuojnë për qytetin e tyre dhe të kenë zë në shaping-un e hapësirave publike.</p>
+        <span class="fw-tag">Qytetari aktiv</span>
+      </div>
+
+      <div class="forwho-card forwho-card-feat reveal-card" style="--ri:1">
+        <div class="fw-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </div>
+        <h3 class="fw-title">Për komunitetin</h3>
+        <p class="fw-body">Për të kuptuar më mirë problemet që përsëriten në zona të ndryshme dhe për të ndërtuar një komunitet qytetar të informuar.</p>
+        <span class="fw-tag">Komuniteti</span>
+      </div>
+
+      <div class="forwho-card reveal-card" style="--ri:2">
+        <div class="fw-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 13h6M9 17h4"/></svg>
+        </div>
+        <h3 class="fw-title">Për një qytet më të organizuar</h3>
+        <p class="fw-body">Për të krijuar më shumë përgjegjësi dhe reagim ndaj problemeve urbane në strukturat vendore.</p>
+        <span class="fw-tag">Institucional</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════ WAITLIST ════════════════════ -->
+<section class="waitlist-section" id="lista-pritjes">
+  <div class="wl-bg">
+    <div class="wl-orb wl-orb-1"></div>
+    <div class="wl-orb wl-orb-2"></div>
+    <div class="wl-grid"></div>
+  </div>
+  <div class="wrap wl-inner">
+    <div class="eyebrow-chip">Lista e Pritjes</div>
+    <h2 class="wl-title">Bëhu ndër të parët<br/>që njoftohen.</h2>
+    <p class="wl-body">
+      Lançimi po afrohet. Lëre email-in tënd dhe do të njoftohesh sapo Syri Qytetarit të jetë gati për shkarkim.
+    </p>
+
+    <form class="wl-form" id="wlForm" novalidate>
+      <div class="wl-field">
+        <svg class="wl-field-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <input
+          class="wl-input"
+          type="email"
+          name="email"
+          id="wlEmail"
+          placeholder="Shkruaj email-in tënd"
+          required
+          autocomplete="email"
+        />
+      </div>
+      <button class="wl-btn" type="submit">
+        Më njofto i pari
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="12" x2="17" y2="12"/><polyline points="12 7 17 12 12 17"/></svg>
+      </button>
+    </form>
+
+    <div class="wl-success" id="wlSuccess">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      Faleminderit! Do të njoftohesh i/e pari kur aplikacioni të lançohet.
+    </div>
+
+    <p class="wl-privacy">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Email-i yt do të përdoret vetëm për njoftime rreth lançimit të aplikacionit.
+    </p>
+
+    <div class="wl-proof">
+      <div class="wl-avatars">
+        <div class="wl-av" style="background:#3B82F6"></div>
+        <div class="wl-av" style="background:#6366F1"></div>
+        <div class="wl-av" style="background:#8B5CF6"></div>
+        <div class="wl-av" style="background:#0EA5E9"></div>
+        <div class="wl-av" style="background:#1D4ED8"></div>
+      </div>
+      <span class="wl-proof-txt">Mbi 250+ qytetarë janë regjistruar tashmë</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════ FOOTER ════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="/logo.png" alt="Syri Qytetarit" class="footer-logo-img" />
+      <span>Syri Qytetarit</span>
+    </div>
+    <p class="footer-tagline">Shiko. Raporto. Ndrysho.</p>
+    <p class="footer-copy">© 2026 Syri Qytetarit. Të gjitha të drejtat e rezervuara.</p>
+  </div>
+</footer>
+
+
+<script>
+  // Header scroll
+  const hdr = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    hdr.classList.toggle('hdr-scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  // Hamburger
+  const ham = document.getElementById('hamburger');
+  const mmenu = document.getElementById('mobileMenu');
+  ham.addEventListener('click', () => {
+    const open = mmenu.classList.toggle('mmenu-open');
+    ham.classList.toggle('ham-open', open);
+    ham.setAttribute('aria-expanded', String(open));
+    mmenu.setAttribute('aria-hidden', String(!open));
+  });
+  mmenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mmenu.classList.remove('mmenu-open');
+      ham.classList.remove('ham-open');
+      ham.setAttribute('aria-expanded', 'false');
+      mmenu.setAttribute('aria-hidden', 'true');
+    });
+  });
+
+  // Waitlist form
+  const form = document.getElementById('wlForm');
+  const succ = document.getElementById('wlSuccess');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const email = document.getElementById('wlEmail').value.trim();
+    if (!email) return;
+    form.style.display = 'none';
+    succ.classList.add('wl-success-show');
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (id === '#') return;
+      const target = document.querySelector(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Reveal on scroll
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal-card, .reveal-why').forEach(el => io.observe(el));
+</script>
+
+
+<style>
+/* ── RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #020617;
+  color: #CBD5E1;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img, svg { display: block; }
+a { color: inherit; }
+button { cursor: pointer; }
+
+/* ── WRAPPER ── */
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media(min-width:768px){ .wrap { padding: 0 40px; } }
+.hide-mob { display: none; }
+@media(min-width:768px){ .hide-mob { display: inline; } }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes orbFloat1 {
+  0%,100%{ transform:translate(0,0) scale(1); }
+  33%    { transform:translate(50px,-60px) scale(1.05); }
+  66%    { transform:translate(-30px,40px) scale(.97); }
+}
+@keyframes orbFloat2 {
+  0%,100%{ transform:translate(0,0); }
+  50%    { transform:translate(-60px,-40px) scale(1.08); }
+}
+@keyframes orbFloat3 {
+  0%,100%{ transform:translateX(-50%) translateY(0); }
+  50%    { transform:translateX(-50%) translateY(-30px); }
+}
+@keyframes dotPulse {
+  0%,100%{ opacity:1; transform:scale(1); }
+  50%    { opacity:.4; transform:scale(.75); }
+}
+@keyframes pinPulse {
+  0%  { transform:translate(-50%,-50%) scale(.5); opacity:1; }
+  100%{ transform:translate(-50%,-50%) scale(2.8); opacity:0; }
+}
+@keyframes scanAnim {
+  0%   { top:0;    opacity:0; }
+  4%   { opacity:1; }
+  96%  { opacity:.8; }
+  100% { top:100%; opacity:0; }
+}
+@keyframes scrollBar {
+  0%   { transform:scaleY(0); transform-origin:top;    opacity:0; }
+  30%  { transform:scaleY(1); opacity:1; }
+  100% { transform:scaleY(1); transform-origin:bottom; opacity:0; }
+}
+@keyframes floatA {
+  0%,100%{ transform:translateY(0); }
+  50%    { transform:translateY(-10px); }
+}
+@keyframes floatB {
+  0%,100%{ transform:translateY(0); }
+  50%    { transform:translateY(8px); }
+}
+@keyframes liveDot {
+  0%,100%{ opacity:1; } 50%{ opacity:.25; }
+}
+
+/* ── HEADER ── */
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  transition: background .3s, border-color .3s, backdrop-filter .3s;
+  border-bottom: 1px solid transparent;
+}
+.site-header.hdr-scrolled {
+  background: rgba(2,6,23,.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom-color: rgba(59,130,246,.1);
+}
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media(min-width:768px){ .header-container { padding: 0 40px; } }
+.header-logo {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none; color: white;
+}
+.logo-text {
+  font-size: 1rem; font-weight: 700;
+  letter-spacing: -.02em; color: white;
+}
+.header-nav {
+  display: none; align-items: center; gap: 4px;
+}
+@media(min-width:768px){ .header-nav { display: flex; } }
+.nav-link {
+  font-size: .875rem; font-weight: 500;
+  color: rgba(203,213,225,.65);
+  text-decoration: none; padding: 8px 14px; border-radius: 8px;
+  transition: color .2s, background .2s;
+}
+.nav-link:hover { color: white; background: rgba(255,255,255,.06); }
+.nav-link.nav-cta {
+  color: #93C5FD;
+  background: rgba(59,130,246,.1);
+  border: 1px solid rgba(59,130,246,.25);
+}
+.nav-link.nav-cta:hover { background: rgba(59,130,246,.2); color: white; }
+.hamburger {
+  display: flex; flex-direction: column; gap: 5px;
+  background: none; border: none; padding: 8px; border-radius: 8px;
+  transition: background .2s;
+}
+.hamburger:hover { background: rgba(255,255,255,.06); }
+.hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: rgba(255,255,255,.7); border-radius: 2px;
+  transition: transform .28s, opacity .28s;
+}
+.ham-open span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
+.ham-open span:nth-child(2){ opacity: 0; }
+.ham-open span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
+@media(min-width:768px){ .hamburger { display: none; } }
+.mobile-menu {
+  display: none; flex-direction: column;
+  padding: 8px 24px 24px;
+  background: rgba(2,6,23,.97);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(59,130,246,.1);
+}
+.mobile-menu.mmenu-open { display: flex; }
+.mobile-nav-link {
+  font-size: 1rem; font-weight: 500;
+  color: rgba(203,213,225,.75); text-decoration: none;
+  padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,.05);
+  transition: color .2s;
+}
+.mobile-nav-link:last-child { border-bottom: none; }
+.mobile-nav-link:hover { color: white; }
+.mobile-nav-cta {
+  color: #93C5FD; font-weight: 600;
+  margin-top: 8px; padding-top: 18px;
+  border-top: 1px solid rgba(59,130,246,.15);
+}
+
+/* ── HERO ── */
+.hero-section {
+  min-height: 100svh;
+  position: relative;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  background: #020617;
+}
+.hero-bg { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(59,130,246,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.hero-orb {
+  position: absolute; border-radius: 50%;
+  filter: blur(80px); will-change: transform;
+}
+.hero-orb-1 {
+  width: 700px; height: 700px; top: -250px; left: -200px;
+  background: radial-gradient(circle, rgba(28,107,255,.28) 0%, transparent 70%);
+  animation: orbFloat1 26s ease-in-out infinite;
+}
+.hero-orb-2 {
+  width: 550px; height: 550px; bottom: -150px; right: -150px;
+  background: radial-gradient(circle, rgba(99,102,241,.22) 0%, transparent 70%);
+  animation: orbFloat2 32s ease-in-out infinite;
+}
+.hero-orb-3 {
+  width: 350px; height: 350px; top: 40%; left: 50%;
+  background: radial-gradient(circle, rgba(59,130,246,.1) 0%, transparent 70%);
+  animation: orbFloat3 22s ease-in-out infinite;
+}
+.hero-vignette {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(2,6,23,.55) 100%);
+}
+.hero-container {
+  position: relative; z-index: 1;
+  max-width: 1200px; margin: 0 auto; width: 100%;
+  padding: 108px 20px 80px;
+  display: flex; flex-direction: column; align-items: center; flex: 1;
+}
+@media(min-width:1024px){
+  .hero-container {
+    flex-direction: row; align-items: center;
+    gap: 64px; padding: 130px 40px 80px;
+  }
+}
+.hero-text {
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; max-width: 540px;
+}
+@media(min-width:1024px){
+  .hero-text {
+    align-items: flex-start; text-align: left;
+    flex: 1; max-width: 560px;
+  }
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(59,130,246,.1);
+  border: 1px solid rgba(59,130,246,.22);
+  border-radius: 100px; padding: 6px 14px;
+  font-size: .75rem; font-weight: 600;
+  color: #93C5FD; letter-spacing: .02em;
+  margin-bottom: 28px;
+  animation: fadeUp .7s cubic-bezier(.16,1,.3,1) .1s both;
+}
+.hero-badge-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #3B82F6; box-shadow: 0 0 8px #3B82F6;
+  flex-shrink: 0;
+  animation: dotPulse 2s ease-in-out infinite;
+}
+.hero-title {
+  font-size: clamp(2.5rem, 7.5vw, 4.2rem);
+  font-weight: 900; line-height: 1.06; letter-spacing: -.045em;
+  color: white; margin-bottom: 24px;
+  animation: fadeUp .8s cubic-bezier(.16,1,.3,1) .22s both;
+}
+.hero-title-accent { color: #3B82F6; }
+.hero-subtitle {
+  font-size: 1rem; line-height: 1.78;
+  color: rgba(203,213,225,.6);
+  max-width: 440px; margin-bottom: 36px;
+  animation: fadeUp .8s cubic-bezier(.16,1,.3,1) .38s both;
+}
+.hero-ctas {
+  display: flex; flex-direction: column; gap: 12px;
+  width: 100%; margin-bottom: 28px;
+  animation: fadeUp .8s cubic-bezier(.16,1,.3,1) .52s both;
+}
+@media(min-width:460px){
+  .hero-ctas { flex-direction: row; flex-wrap: wrap; justify-content: center; width: auto; }
+}
+@media(min-width:1024px){ .hero-ctas { justify-content: flex-start; } }
+.btn-primary-hero {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #1C6BFF; color: white;
+  font-size: .93rem; font-weight: 600;
+  padding: 14px 22px; border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 0 28px rgba(28,107,255,.38);
+  transition: background .2s, transform .15s, box-shadow .2s;
+  white-space: nowrap;
+}
+.btn-primary-hero:hover {
+  background: #1557E0; transform: translateY(-2px);
+  box-shadow: 0 0 36px rgba(28,107,255,.55);
+}
+.btn-secondary-hero {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.11);
+  color: rgba(255,255,255,.72);
+  font-size: .93rem; font-weight: 500;
+  padding: 14px 20px; border-radius: 12px;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  transition: background .2s, border-color .2s, color .2s, transform .15s;
+  white-space: nowrap;
+}
+.btn-secondary-hero:hover {
+  background: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.22);
+  color: white; transform: translateY(-2px);
+}
+.hero-stores {
+  display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;
+  animation: fadeUp .8s cubic-bezier(.16,1,.3,1) .65s both;
+}
+@media(min-width:1024px){ .hero-stores { justify-content: flex-start; } }
+.store-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+  border-radius: 10px; padding: 9px 13px;
+  color: rgba(255,255,255,.55);
+}
+.store-sub {
+  display: block; font-size: .55rem; font-weight: 500;
+  letter-spacing: .04em; text-transform: uppercase; opacity: .55;
+}
+.store-name {
+  display: block; font-size: .78rem; font-weight: 700;
+  color: rgba(255,255,255,.78);
+}
+/* Premium Apple badge */
+.store-badge-apple {
+  background: rgba(4, 8, 22, 0.72);
+  border: 1px solid rgba(30, 185, 255, 0.42);
+  box-shadow:
+    0 0 12px rgba(0, 170, 255, 0.22),
+    0 0 30px rgba(0, 140, 255, 0.1),
+    inset 0 0 18px rgba(0, 160, 255, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  padding: 10px 16px;
+}
+.store-badge-apple:hover {
+  box-shadow:
+    0 0 18px rgba(0, 180, 255, 0.35),
+    0 0 42px rgba(0, 150, 255, 0.16),
+    inset 0 0 20px rgba(0, 165, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border-color: rgba(30, 195, 255, 0.6);
+}
+.store-name-apple {
+  color: #FFF8EE;
+  text-shadow:
+    0 0 10px rgba(255, 215, 130, 0.65),
+    0 0 22px rgba(255, 190, 80, 0.3),
+    0 0 40px rgba(255, 170, 50, 0.12);
+}
+.gplay-icon {
+  width: 24px; height: 24px;
+  object-fit: contain; flex-shrink: 0;
+}
+/* Premium Google Play badge */
+.store-badge-gplay {
+  background: rgba(4, 8, 22, 0.72);
+  border: 1px solid rgba(30, 185, 255, 0.42);
+  box-shadow:
+    0 0 12px rgba(0, 170, 255, 0.22),
+    0 0 30px rgba(0, 140, 255, 0.1),
+    inset 0 0 18px rgba(0, 160, 255, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  padding: 10px 16px;
+}
+.store-badge-gplay:hover {
+  box-shadow:
+    0 0 18px rgba(0, 180, 255, 0.35),
+    0 0 42px rgba(0, 150, 255, 0.16),
+    inset 0 0 20px rgba(0, 165, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border-color: rgba(30, 195, 255, 0.6);
+}
+.store-name-gplay {
+  color: #FFF8EE;
+  text-shadow:
+    0 0 10px rgba(255, 215, 130, 0.65),
+    0 0 22px rgba(255, 190, 80, 0.3),
+    0 0 40px rgba(255, 170, 50, 0.12);
+}
+/* Hero visual */
+.hero-visual {
+  display: none; position: relative; flex: 0 0 auto;
+}
+@media(min-width:1024px){
+  .hero-visual { display: block; width: 420px; }
+}
+.city-card {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(59,130,246,.18);
+  border-radius: 22px; overflow: hidden;
+  backdrop-filter: blur(20px);
+  box-shadow:
+    0 0 0 1px rgba(59,130,246,.08),
+    0 40px 80px rgba(0,0,0,.45),
+    inset 0 1px 0 rgba(255,255,255,.04);
+  animation: fadeUp .8s cubic-bezier(.16,1,.3,1) .5s both;
+}
+.city-card-hdr {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255,255,255,.05);
+}
+.city-card-logo-row {
+  display: flex; align-items: center; gap: 7px;
+  font-size: .82rem; font-weight: 700;
+  color: rgba(255,255,255,.82);
+}
+.live-chip {
+  display: flex; align-items: center; gap: 5px;
+  font-size: .67rem; font-weight: 700; color: #10b981;
+  background: rgba(16,185,129,.1);
+  border: 1px solid rgba(16,185,129,.2);
+  border-radius: 100px; padding: 3px 9px;
+}
+.live-dot {
+  width: 6px; height: 6px; border-radius: 50%; background: #10b981;
+  animation: liveDot 1.4s ease-in-out infinite;
+}
+.city-map {
+  position: relative; height: 230px;
+  background: #040e1f; overflow: hidden;
+}
+.cmap-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(59,130,246,.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,.055) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+.cmap-road-h {
+  position: absolute; left: 0; right: 0; height: 7px;
+  background: rgba(15,25,45,.95);
+}
+.cmap-road-v {
+  position: absolute; top: 0; bottom: 0; width: 7px;
+  background: rgba(15,25,45,.95);
+}
+.cmap-block {
+  position: absolute;
+  background: rgba(10,20,45,.85);
+  border: 1px solid rgba(59,130,246,.07);
+  border-radius: 2px;
+}
+.cmap-block-hi { background: rgba(15,28,55,.9); }
+.cmap-pin {
+  position: absolute; width: 14px; height: 14px;
+  transform: translate(-50%, -50%);
+}
+.cmap-pin::before {
+  content: '';
+  position: absolute; inset: 2px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+}
+.pin-blue::before  { background: #3B82F6; }
+.pin-amber::before { background: #F59E0B; }
+.pin-green::before { background: #10B981; }
+.pin-violet::before{ background: #8B5CF6; }
+.pin-ring {
+  position: absolute; inset: -5px;
+  border-radius: 50%;
+  border: 2px solid rgba(59,130,246,.45);
+  animation: pinPulse 2.2s ease-out infinite;
+}
+.scan-line {
+  position: absolute; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(59,130,246,.7) 50%, transparent 100%);
+  animation: scanAnim 5s linear infinite;
+}
+.city-stats {
+  display: flex; align-items: center;
+  padding: 14px 18px; gap: 0;
+}
+.cstat { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.cstat-n {
+  font-size: 1.25rem; font-weight: 800;
+  color: white; letter-spacing: -.03em;
+}
+.cstat-l {
+  font-size: .6rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: .06em; color: rgba(148,163,184,.5);
+}
+.cstat-sep {
+  width: 1px; height: 30px;
+  background: rgba(255,255,255,.06); flex-shrink: 0;
+}
+.float-card {
+  position: absolute;
+  background: rgba(8,18,38,.92);
+  border: 1px solid rgba(59,130,246,.18);
+  border-radius: 12px; padding: 10px 14px;
+  display: flex; align-items: center; gap: 10px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.4);
+  white-space: nowrap;
+}
+.fc-top { top: 55px; right: -24px; animation: floatA 4.5s ease-in-out infinite; }
+.fc-bot { bottom: 55px; left: -24px; animation: floatB 5s ease-in-out infinite; }
+.fc-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.fc-title { font-size: .76rem; font-weight: 600; color: rgba(255,255,255,.85); }
+.fc-meta  { font-size: .63rem; color: rgba(148,163,184,.55); margin-top: 2px; }
+.visual-glow {
+  position: absolute; width: 340px; height: 340px; top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  background: radial-gradient(circle, rgba(28,107,255,.1) 0%, transparent 65%);
+  pointer-events: none; z-index: -1;
+}
+.hero-scroll {
+  position: absolute; bottom: 30px; left: 50%;
+  transform: translateX(-50%); z-index: 1;
+}
+.scroll-bar {
+  width: 1.5px; height: 40px;
+  background: linear-gradient(to bottom, rgba(255,255,255,.5), transparent);
+  animation: scrollBar 2.2s ease-in-out infinite;
+}
+
+/* ── SHARED SECTION UTILITIES ── */
+.eyebrow-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: .67rem; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: #3B82F6;
+  background: rgba(59,130,246,.08);
+  border: 1px solid rgba(59,130,246,.14);
+  border-radius: 100px; padding: 5px 12px;
+  margin-bottom: 18px;
+}
+.sec-hdr { margin-bottom: 52px; }
+.sec-title {
+  font-size: clamp(1.75rem, 3.8vw, 2.7rem);
+  font-weight: 800; line-height: 1.15; letter-spacing: -.035em;
+  color: white;
+}
+
+/* ── TEASER ── */
+.teaser-section {
+  padding: 80px 0;
+  background: #030d1e;
+  border-top: 1px solid rgba(59,130,246,.07);
+  border-bottom: 1px solid rgba(59,130,246,.07);
+}
+@media(min-width:768px){ .teaser-section { padding: 100px 0; } }
+.teaser-inner {
+  max-width: 720px; margin: 0 auto; text-align: center;
+}
+.teaser-title {
+  font-size: clamp(1.9rem, 4.2vw, 2.9rem);
+  font-weight: 800; line-height: 1.15; letter-spacing: -.04em;
+  color: white; margin-bottom: 22px;
+}
+.teaser-body {
+  font-size: 1.02rem; line-height: 1.82;
+  color: rgba(148,163,184,.75); max-width: 580px; margin: 0 auto;
+}
+
+/* ── HOW IT WORKS ── */
+.how-section { padding: 80px 0; background: #020617; }
+@media(min-width:768px){ .how-section { padding: 112px 0; } }
+.how-grid {
+  display: grid; grid-template-columns: 1fr; gap: 14px;
+}
+@media(min-width:768px){ .how-grid { grid-template-columns: repeat(3,1fr); gap: 20px; } }
+.how-card {
+  background: rgba(255,255,255,.025);
+  border: 1px solid rgba(59,130,246,.1);
+  border-radius: 20px; padding: 28px 22px;
+  backdrop-filter: blur(10px);
+  transition: border-color .3s, background .3s, box-shadow .3s;
+}
+.how-card:hover {
+  border-color: rgba(59,130,246,.35);
+  background: rgba(59,130,246,.045);
+  box-shadow: 0 16px 40px rgba(0,0,0,.3), 0 0 0 1px rgba(59,130,246,.12);
+}
+.how-card.how-card-feat {
+  background: rgba(28,107,255,.07);
+  border-color: rgba(59,130,246,.26);
+  box-shadow: 0 0 40px rgba(28,107,255,.09);
+}
+.how-icon {
+  width: 50px; height: 50px; border-radius: 14px;
+  background: rgba(59,130,246,.09);
+  border: 1px solid rgba(59,130,246,.18);
+  display: flex; align-items: center; justify-content: center;
+  color: #3B82F6; margin-bottom: 18px;
+}
+.how-card-feat .how-icon {
+  background: rgba(59,130,246,.14);
+  border-color: rgba(59,130,246,.3);
+}
+.how-num {
+  display: block; font-size: .6rem; font-weight: 800;
+  letter-spacing: .1em; color: rgba(59,130,246,.45);
+  margin-bottom: 9px;
+}
+.how-card-title {
+  font-size: 1rem; font-weight: 700;
+  color: white; margin-bottom: 10px; line-height: 1.3;
+}
+.how-card-body {
+  font-size: .875rem; line-height: 1.72;
+  color: rgba(148,163,184,.68);
+}
+
+/* ── REVEAL ANIMATION ── */
+.reveal-card {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity .65s cubic-bezier(.16,1,.3,1) calc(var(--ri,0) * .12s),
+    transform .65s cubic-bezier(.16,1,.3,1) calc(var(--ri,0) * .12s);
+}
+.reveal-card.is-revealed { opacity: 1; transform: translateY(0); }
+
+/* ── WHY ── */
+.why-section {
+  padding: 80px 0;
+  background: #030d1e;
+  border-top: 1px solid rgba(59,130,246,.07);
+  border-bottom: 1px solid rgba(59,130,246,.07);
+}
+@media(min-width:768px){ .why-section { padding: 112px 0; } }
+.why-inner {
+  display: flex; flex-direction: column; gap: 40px;
+  opacity: 0; transform: translateY(26px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.why-inner.is-revealed { opacity: 1; transform: translateY(0); }
+@media(min-width:900px){
+  .why-inner { flex-direction: row; gap: 80px; align-items: flex-start; }
+  .why-left { flex: 0 0 260px; }
+  .why-right { flex: 1; }
+}
+.why-title { margin-top: 0; }
+.why-p {
+  font-size: 1rem; line-height: 1.86;
+  color: rgba(148,163,184,.78); margin-bottom: 20px;
+}
+.why-p:last-of-type { margin-bottom: 30px; }
+.why-p strong { color: rgba(255,255,255,.88); font-weight: 600; }
+.why-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.why-tag {
+  display: flex; align-items: center; gap: 7px;
+  font-size: .82rem; font-weight: 600;
+  color: rgba(203,213,225,.65);
+  background: rgba(59,130,246,.06);
+  border: 1px solid rgba(59,130,246,.13);
+  border-radius: 8px; padding: 6px 13px;
+}
+.wt-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #3B82F6; flex-shrink: 0;
+}
+
+/* ── FOR WHO ── */
+.forwho-section { padding: 80px 0; background: #020617; }
+@media(min-width:768px){ .forwho-section { padding: 112px 0; } }
+.forwho-grid {
+  display: grid; grid-template-columns: 1fr; gap: 14px;
+}
+@media(min-width:768px){ .forwho-grid { grid-template-columns: repeat(3,1fr); gap: 20px; } }
+.forwho-card {
+  background: rgba(255,255,255,.025);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 20px; padding: 28px 22px;
+  display: flex; flex-direction: column;
+  transition: border-color .3s, background .3s, box-shadow .3s;
+}
+.forwho-card:hover {
+  border-color: rgba(59,130,246,.28);
+  background: rgba(59,130,246,.04);
+  box-shadow: 0 16px 40px rgba(0,0,0,.28);
+}
+.forwho-card-feat {
+  background: rgba(28,107,255,.065);
+  border-color: rgba(59,130,246,.22);
+  box-shadow: 0 0 40px rgba(28,107,255,.08);
+}
+.fw-icon {
+  width: 54px; height: 54px; border-radius: 15px;
+  background: rgba(59,130,246,.08);
+  border: 1px solid rgba(59,130,246,.15);
+  display: flex; align-items: center; justify-content: center;
+  color: #3B82F6; margin-bottom: 20px;
+}
+.fw-title {
+  font-size: 1rem; font-weight: 700;
+  color: white; margin-bottom: 11px; line-height: 1.3;
+}
+.fw-body {
+  font-size: .875rem; line-height: 1.72;
+  color: rgba(148,163,184,.68); flex: 1; margin-bottom: 20px;
+}
+.fw-tag {
+  display: inline-block; font-size: .65rem; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: rgba(59,130,246,.65);
+  background: rgba(59,130,246,.07);
+  border: 1px solid rgba(59,130,246,.14);
+  border-radius: 6px; padding: 4px 10px;
+  align-self: flex-start; margin-top: auto;
+}
+
+/* ── WAITLIST ── */
+.waitlist-section {
+  padding: 88px 0 100px;
+  position: relative; overflow: hidden;
+  background: #020617;
+  border-top: 1px solid rgba(59,130,246,.1);
+}
+@media(min-width:768px){ .waitlist-section { padding: 120px 0 140px; } }
+.wl-bg { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.wl-orb {
+  position: absolute; border-radius: 50%; filter: blur(64px);
+}
+.wl-orb-1 {
+  width: 700px; height: 700px; top: -250px;
+  left: 50%; transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(28,107,255,.18) 0%, transparent 65%);
+}
+.wl-orb-2 {
+  width: 450px; height: 450px; bottom: -120px;
+  left: 50%; transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(99,102,241,.13) 0%, transparent 65%);
+}
+.wl-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(59,130,246,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,.03) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+.wl-inner { position: relative; z-index: 1; text-align: center; }
+.wl-title {
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  font-weight: 900; line-height: 1.1; letter-spacing: -.045em;
+  color: white; margin-bottom: 18px; margin-top: 14px;
+}
+.wl-body {
+  font-size: 1rem; line-height: 1.78;
+  color: rgba(148,163,184,.72);
+  max-width: 480px; margin: 0 auto 36px;
+}
+.wl-form {
+  display: flex; flex-direction: column; gap: 12px;
+  max-width: 480px; margin: 0 auto 18px;
+}
+@media(min-width:560px){ .wl-form { flex-direction: row; gap: 0; } }
+.wl-field { position: relative; flex: 1; }
+.wl-field-icon {
+  position: absolute; top: 50%; left: 16px;
+  transform: translateY(-50%);
+  color: rgba(148,163,184,.35); pointer-events: none;
+}
+.wl-input {
+  width: 100%;
+  background: rgba(255,255,255,.05);
+  border: 1.5px solid rgba(255,255,255,.1);
+  border-radius: 12px;
+  padding: 15px 16px 15px 44px;
+  font-size: .93rem; font-family: inherit;
+  color: white; outline: none;
+  transition: border-color .2s, background .2s, box-shadow .2s;
+}
+.wl-input::placeholder { color: rgba(148,163,184,.38); }
+.wl-input:focus {
+  border-color: rgba(59,130,246,.48);
+  background: rgba(59,130,246,.05);
+  box-shadow: 0 0 0 3px rgba(59,130,246,.1);
+}
+@media(min-width:560px){
+  .wl-input { border-radius: 12px 0 0 12px; border-right-width: 0; }
+  .wl-input:focus { border-right-width: 0; }
+}
+.wl-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 8px; background: #1C6BFF; color: white;
+  font-size: .93rem; font-weight: 600; font-family: inherit;
+  padding: 15px 22px; border: none; border-radius: 12px;
+  box-shadow: 0 0 28px rgba(28,107,255,.32);
+  transition: background .2s, box-shadow .2s, transform .15s;
+  white-space: nowrap;
+}
+.wl-btn:hover {
+  background: #1557E0;
+  box-shadow: 0 0 40px rgba(28,107,255,.52);
+  transform: translateY(-1px);
+}
+@media(min-width:560px){ .wl-btn { border-radius: 0 12px 12px 0; } }
+.wl-success {
+  display: none; align-items: center; justify-content: center; gap: 10px;
+  max-width: 480px; margin: 0 auto 18px;
+  padding: 15px 20px;
+  background: rgba(16,185,129,.07);
+  border: 1px solid rgba(16,185,129,.18);
+  border-radius: 12px; font-size: .9rem; font-weight: 500;
+  color: rgba(203,213,225,.82);
+}
+.wl-success.wl-success-show { display: flex; }
+.wl-privacy {
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  font-size: .76rem; color: rgba(100,116,139,.6); margin-bottom: 32px;
+}
+.wl-proof { display: flex; align-items: center; justify-content: center; gap: 12px; }
+.wl-avatars { display: flex; }
+.wl-av {
+  width: 30px; height: 30px; border-radius: 50%;
+  border: 2px solid #020617; margin-left: -9px; opacity: .82;
+}
+.wl-av:first-child { margin-left: 0; }
+.wl-proof-txt { font-size: .8rem; color: rgba(148,163,184,.55); }
+
+/* ── FOOTER ── */
+.site-footer {
+  padding: 48px 20px;
+  background: #010812;
+  border-top: 1px solid rgba(255,255,255,.04);
+}
+.footer-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 10px; text-align: center;
+}
+.footer-logo {
+  display: flex; align-items: center; gap: 10px;
+  font-size: .95rem; font-weight: 700;
+  color: rgba(255,255,255,.62); margin-bottom: 4px;
+}
+.footer-tagline {
+  font-size: .78rem; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: rgba(59,130,246,.6);
+}
+.footer-copy { font-size: .75rem; color: rgba(100,116,139,.45); }
+
+/* ── LOGO IMAGES ── */
+.logo-img {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+}
+@media(min-width:768px){
+  .logo-img { height: 48px; }
+}
+.card-logo-img {
+  height: 18px;
+  width: auto;
+  object-fit: contain;
+}
+.footer-logo-img {
+  height: 26px;
+  width: auto;
+  object-fit: contain;
+}
+</style>
+
+</body>
+</html>

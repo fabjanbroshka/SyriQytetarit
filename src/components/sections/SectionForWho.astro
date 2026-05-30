@@ -1,0 +1,284 @@
+---
+const audiences = [
+  { label: "Udhëtarët",            icon: "🚌" },
+  { label: "Banorët",              icon: "🏘️" },
+  { label: "Prindërit",            icon: "👨‍👧" },
+  { label: "Çiklistët",            icon: "🚴" },
+  { label: "Pronarët e dyqaneve",  icon: "🏪" },
+  { label: "Studentët",            icon: "🎓" },
+  { label: "Shoferët",             icon: "🚗" },
+  { label: "Kushdo",               icon: "👁️" },
+];
+---
+
+<section class="who-section" id="who">
+
+  <!-- Shiriti i sipërm -->
+  <div class="who-top">
+    <div class="container">
+      <div class="who-top-grid">
+        <div class="who-heading">
+          <span class="eyebrow">Për kë?</span>
+          <h2 class="section-title">
+            Për çdo qytetar<br/>
+            që dëshiron<br/>
+            përmirësimin e qytetit.
+          </h2>
+        </div>
+        <div class="who-body-col">
+          <p class="who-body">Pa pritje. Pa burokraci. Pa nevojë të dish kë të telefonosh ose cilin formular të plotësosh. Hap thjesht aplikacionin, raporto çfarë sheh dhe lër të dhënat të bëjnë punën.</p>
+          <p class="who-body">Çdo raport — i madh apo i vogël — kontribuon në një pasqyrë më të qartë të asaj që duhet ndreqitur në qytetin tuaj.</p>
+          <div class="who-audiences">
+            {audiences.map(a => (
+              <span class="audience-pill">
+                <span class="pill-icon" aria-hidden="true">{a.icon}</span>
+                {a.label}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shiriti CTA -->
+  <div class="who-cta" id="cta">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-left">
+          <span class="eyebrow eyebrow-light">Ji i pari</span>
+          <h3 class="cta-title">Syri Qytetar po vjen.</h3>
+          <p class="cta-sub">Lër emailin tënd dhe do të njoftohesh sapo të lansohet.</p>
+        </div>
+        <div class="cta-right">
+          <form class="cta-form" id="whoForm">
+            <div class="cta-row">
+              <input
+                type="email"
+                placeholder="email@yt.com"
+                required
+                class="cta-input"
+              />
+              <button type="submit" class="cta-btn">Njoftomë</button>
+            </div>
+            <p class="cta-note">Pa spam. Çregjistrohu në çdo kohë.</p>
+          </form>
+          <div class="cta-stores">
+            <a href="#" class="store-link">
+              <svg width="18" height="18" viewBox="0 0 814 1000" fill="currentColor">
+                <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-57.8-155.5-127.4C46 376.8 0 246.4 0 121.2 0 56.9 20.2 14.2 60.3 14.2c35.3 0 68.7 21.1 95.7 21.1 37.1 0 83.3-22.4 127.3-22.4 45.1 0 104.1 16.1 140.4 68.5h1.9c-4.5-21.6-10.9-50.3-10.9-74.6 0-58.4 33.5-100.7 76-117.5 5.8 15.3 9.6 33.5 9.6 52.4 0 64.9-46.5 117.5-84.8 117.5h-1.9c3.8 23 47.2 58.4 93.5 58.4 35.3 0 65.5-18.2 91.3-44.5l15.4 8.7z"/>
+              </svg>
+              App Store
+            </a>
+            <span class="store-sep">·</span>
+            <a href="#" class="store-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.18 23.76c.32.18.68.24 1.04.17l11.3-11.3-2.98-2.98L3.18 23.76z"/>
+                <path d="M22.38 10.54l-3.03-1.72-3.35 3.35 3.35 3.35 3.04-1.73c.87-.49.87-1.76-.01-2.25z"/>
+                <path d="M1.26 1.1C1.1 1.36 1 1.67 1 2.02v19.96c0 .35.1.66.26.92l.1.1L13.54 10.8v-.29L1.36 1z"/>
+                <path d="M13.54 14.21l-2.17-2.17L1.26 22.97c.37.39.95.43 1.38.1l10.9-8.86z"/>
+              </svg>
+              Google Play
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<script>
+  document.getElementById('whoForm')?.addEventListener('submit', e => {
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    const btn  = form.querySelector('button') as HTMLButtonElement;
+    const inp  = form.querySelector('input')  as HTMLInputElement;
+    btn.textContent = "Jeni në listë!";
+    btn.disabled = inp.disabled = true;
+    btn.style.background = '#10b981';
+  });
+</script>
+
+<style>
+  .who-section { display: flex; flex-direction: column; }
+
+  .container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .who-top {
+    background: #f8fafc;
+    padding: 112px 0 80px;
+    border-top: 1px solid #e2e8f0;
+  }
+  .who-top-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: #2563eb;
+    margin-bottom: 16px;
+  }
+  .eyebrow-light { color: rgba(147,197,253,.7); }
+
+  .section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -.035em;
+    line-height: 1.1;
+    color: #0a0f1a;
+  }
+
+  .who-body {
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .who-audiences {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+  }
+  .audience-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    background: #fff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 100px;
+    font-size: .82rem;
+    font-weight: 500;
+    color: #475569;
+    transition: border-color .2s, color .2s, transform .15s;
+    cursor: default;
+  }
+  .audience-pill:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+    transform: translateY(-1px);
+  }
+  .pill-icon { font-size: .9rem; }
+
+  .who-cta {
+    background: #0a0f1a;
+    padding: 80px 0;
+  }
+
+  .cta-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 24px;
+    padding: 48px;
+  }
+
+  .cta-title {
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 800;
+    letter-spacing: -.03em;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 10px;
+  }
+  .cta-sub {
+    font-size: .9rem;
+    color: rgba(255,255,255,.5);
+    line-height: 1.65;
+  }
+
+  .cta-form { margin-bottom: 20px; }
+  .cta-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .cta-input {
+    flex: 1;
+    padding: 13px 16px;
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 10px;
+    color: #fff;
+    font-size: .9rem;
+    font-family: inherit;
+    outline: none;
+    min-width: 0;
+    transition: border-color .2s;
+  }
+  .cta-input::placeholder { color: rgba(255,255,255,.3); }
+  .cta-input:focus { border-color: rgba(59,130,246,.5); }
+
+  .cta-btn {
+    padding: 13px 22px;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: .875rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    white-space: nowrap;
+    transition: background .2s;
+  }
+  .cta-btn:hover { background: #1d4ed8; }
+
+  .cta-note {
+    font-size: .68rem;
+    color: rgba(255,255,255,.22);
+  }
+
+  .cta-stores {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .store-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: .82rem;
+    font-weight: 600;
+    color: rgba(255,255,255,.5);
+    text-decoration: none;
+    transition: color .2s;
+  }
+  .store-link:hover { color: rgba(255,255,255,.85); }
+  .store-sep { color: rgba(255,255,255,.2); font-size: .9rem; }
+
+  @media (max-width: 900px) {
+    .who-top { padding: 80px 0 64px; }
+    .container { padding: 0 20px; }
+    .who-top-grid { grid-template-columns: 1fr; gap: 40px; }
+    .cta-box { grid-template-columns: 1fr; gap: 36px; padding: 36px 28px; }
+    .who-cta { padding: 64px 0; }
+  }
+  @media (max-width: 560px) {
+    .who-top { padding: 64px 0 48px; }
+    .container { padding: 0 16px; }
+    .section-title { font-size: clamp(1.75rem, 7vw, 2.4rem); }
+    .cta-box { padding: 28px 20px; border-radius: 18px; }
+    .cta-row { flex-direction: column; }
+    .cta-btn { width: 100%; }
+    .who-cta { padding: 48px 0; }
+  }
+</style>

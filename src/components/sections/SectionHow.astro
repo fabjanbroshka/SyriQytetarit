@@ -1,0 +1,233 @@
+---
+const steps = [
+  {
+    n: "01",
+    title: "Shikon një problem",
+    desc: "Vëren diçka të gabuar në rrugën tënde, lagjen ose çdo hapësirë publike rreth teje.",
+    color: "#3b82f6",
+    bg: "#eff6ff",
+    icon: `<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>`,
+  },
+  {
+    n: "02",
+    title: "Bëj një foto ose video",
+    desc: "Dokumento problemin direkt nga brenda aplikacionit duke përdorur kamerën e telefonit.",
+    color: "#f59e0b",
+    bg: "#fffbeb",
+    icon: `<path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/>`,
+  },
+  {
+    n: "03",
+    title: "Zgjidh kategorinë",
+    desc: "Zgjidh nga një listë e qartë që raporti të klasifikohet saktë dhe të dërgohet te personat e duhur.",
+    color: "#10b981",
+    bg: "#f0fdf4",
+    icon: `<path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>`,
+  },
+  {
+    n: "04",
+    title: "Vendndodhja vendoset automatikisht",
+    desc: "GPS përcakton pozicionin tënd të saktë. Tërhiq shënuesin e hartës për rregullime nëse nevojitet.",
+    color: "#8b5cf6",
+    bg: "#f5f3ff",
+    icon: `<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>`,
+  },
+  {
+    n: "05",
+    title: "Gati — raporti juaj është dërguar",
+    desc: "Raporti juaj është dërguar dhe gjurmohet. Do të merrni njoftime ndërsa statusi i tij ndryshon.",
+    color: "#2563eb",
+    bg: "#eff6ff",
+    icon: `<line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>`,
+  },
+];
+---
+
+<section class="how-section" id="how">
+  <div class="container">
+
+    <header class="section-header">
+      <span class="eyebrow">Si funksionon?</span>
+      <h2 class="section-title">Pesë hapa.<br class="mob-br"/>Tridhjetë sekonda.</h2>
+    </header>
+
+    <div class="steps-wrap">
+      {steps.map((s, i) => (
+        <div class="step-item" style={`--c:${s.color}; --bg:${s.bg}; --i:${i}`}>
+          <div class="step-card">
+            <div class="step-top">
+              <span class="step-num">{s.n}</span>
+              <div class="step-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" set:html={s.icon}/>
+              </div>
+            </div>
+            <h3>{s.title}</h3>
+            <p>{s.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="progress-row">
+      {steps.map((s, i) => (
+        <div class="prog-item" style={`--c:${s.color}`}>
+          <div class="prog-dot"></div>
+          {i < steps.length - 1 && <div class="prog-line"></div>}
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<style>
+  @keyframes stepIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .how-section {
+    background: #fff;
+    padding: 112px 0;
+    position: relative;
+  }
+  .how-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+  }
+
+  .container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .section-header { margin-bottom: 64px; }
+  .eyebrow {
+    display: inline-block;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: #2563eb;
+    margin-bottom: 14px;
+  }
+  .section-title {
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    font-weight: 800;
+    letter-spacing: -.035em;
+    line-height: 1.1;
+    color: #0a0f1a;
+  }
+  .mob-br { display: none; }
+
+  .steps-wrap {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .step-item { position: relative; }
+
+  .step-card {
+    height: 100%;
+    background: var(--bg);
+    border: 1.5px solid transparent;
+    border-radius: 18px;
+    padding: 24px 20px;
+    transition: border-color .25s, transform .25s, box-shadow .25s;
+    cursor: default;
+    opacity: 0;
+    animation: stepIn .6s cubic-bezier(.16,1,.3,1) calc(var(--i) * .1s) forwards;
+  }
+  .step-card:hover {
+    border-color: var(--c);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0,0,0,.07);
+  }
+
+  .step-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  .step-num {
+    font-size: .6rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+    color: var(--c);
+    opacity: .7;
+  }
+  .step-icon {
+    width: 36px; height: 36px;
+    background: var(--c);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  .step-card h3 {
+    font-size: .88rem;
+    font-weight: 700;
+    color: #0a0f1a;
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .step-card p {
+    font-size: .78rem;
+    color: #64748b;
+    line-height: 1.65;
+  }
+
+  .progress-row {
+    display: flex;
+    align-items: center;
+  }
+  .prog-item {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+  .prog-item:last-child { flex: 0; }
+  .prog-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--c);
+    flex-shrink: 0;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 20%, transparent);
+  }
+  .prog-line {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, var(--c), #e2e8f0);
+  }
+
+  @media (max-width: 1024px) {
+    .steps-wrap { grid-template-columns: repeat(3, 1fr); }
+    .progress-row { display: none; }
+  }
+  @media (max-width: 900px) {
+    .how-section { padding: 80px 0; }
+    .container { padding: 0 20px; }
+    .section-header { margin-bottom: 48px; }
+  }
+  @media (max-width: 640px) {
+    .steps-wrap { grid-template-columns: 1fr; gap: 10px; }
+    .section-title { font-size: clamp(1.75rem, 7vw, 2.4rem); }
+    .mob-br { display: block; }
+  }
+  @media (max-width: 560px) {
+    .how-section { padding: 64px 0; }
+    .container { padding: 0 16px; }
+    .step-card { padding: 20px 16px; }
+  }
+</style>

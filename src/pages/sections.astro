@@ -1,0 +1,427 @@
+---
+import '../styles/global.css';
+import SectionHero   from '../components/sections/SectionHero.astro';
+import SectionWhat   from '../components/sections/SectionWhat.astro';
+import SectionWhy    from '../components/sections/SectionWhy.astro';
+import SectionHow    from '../components/sections/SectionHow.astro';
+import SectionForWho from '../components/sections/SectionForWho.astro';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Syri Qytetar — Raporto problemet e qytetit brenda 30 sekondave. Shiko. Raporto. Ndrysho." />
+    <title>Syri Qytetar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+
+    <!-- NAV -->
+    <header class="nav" id="mainNav">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">
+          <div class="nav-logo-icon">
+            <svg width="16" height="16" viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="21" stroke="#3b82f6" stroke-width="2.5"/>
+              <ellipse cx="24" cy="24" rx="9" ry="6.5" stroke="white" stroke-width="2"/>
+              <circle cx="24" cy="24" r="3" fill="#3b82f6"/>
+              <circle cx="24" cy="24" r="1.2" fill="white"/>
+            </svg>
+          </div>
+          Syri Qytetar
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="#what">Çfarë</a>
+          <a href="#why">Pse</a>
+          <a href="#how">Si</a>
+          <a href="#who">Për kë</a>
+        </nav>
+
+        <div class="nav-right">
+          <a href="#who" class="nav-cta">Njoftomë</a>
+          <button class="burger" id="burger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile drawer -->
+      <div class="drawer" id="drawer">
+        <a href="#what">Çfarë është?</a>
+        <a href="#why">Pse?</a>
+        <a href="#how">Si funksionon?</a>
+        <a href="#who">Për kë?</a>
+        <a href="#cta" class="drawer-cta">Njoftomë</a>
+      </div>
+    </header>
+
+    <!-- SECTIONS -->
+    <main>
+      <SectionHero />
+      <SectionWhat />
+      <SectionWhy />
+      <SectionHow />
+      <SectionForWho />
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-top">
+          <a href="#hero" class="nav-logo footer-logo">
+            <div class="nav-logo-icon footer-logo-icon">
+              <svg width="14" height="14" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="21" stroke="#3b82f6" stroke-width="2.5"/>
+                <ellipse cx="24" cy="24" rx="9" ry="6.5" stroke="#0a0f1a" stroke-width="2"/>
+                <circle cx="24" cy="24" r="3" fill="#3b82f6"/>
+                <circle cx="24" cy="24" r="1.2" fill="white"/>
+              </svg>
+            </div>
+            Syri Qytetar
+          </a>
+          <p class="footer-tag">Shiko. Raporto. Ndrysho.</p>
+          <nav class="footer-nav">
+            <a href="#what">Çfarë</a>
+            <a href="#why">Pse</a>
+            <a href="#how">Si</a>
+            <a href="#who">Për kë</a>
+            <a href="#cta">Shkarko</a>
+          </nav>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Syri Qytetar. Të gjitha të drejtat e rezervuara.</p>
+          <div class="footer-links">
+            <a href="#">Politika e Privatësisë</a>
+            <a href="#">Kushtet e Përdorimit</a>
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
+
+<script>
+  /* NAV: scroll style */
+  const nav = document.getElementById('mainNav')!;
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 48);
+  }, { passive: true });
+
+  /* NAV: burger */
+  const burger = document.getElementById('burger')!;
+  const drawer = document.getElementById('drawer')!;
+
+  burger.addEventListener('click', () => {
+    const open = drawer.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    drawer.classList.remove('open');
+    burger.classList.remove('open');
+    document.body.style.overflow = '';
+  }));
+
+  /* Active nav link on scroll */
+  const sections = document.querySelectorAll<HTMLElement>('section[id]');
+  const navLinks  = document.querySelectorAll<HTMLAnchorElement>('.nav-links a');
+
+  const linkObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+        active?.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -55%' });
+
+  sections.forEach(s => linkObserver.observe(s));
+</script>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --font: 'Inter', system-ui, sans-serif;
+    --ink:  #0a0f1a;
+    --blue: #2563eb;
+    --muted: #64748b;
+    --border: #e2e8f0;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  .nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 200;
+    padding: 18px 32px;
+    transition: background .3s, box-shadow .3s, padding .3s;
+  }
+  .nav.scrolled {
+    background: rgba(255,255,255,.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 1px 0 var(--border);
+    padding: 12px 32px;
+  }
+
+  .nav-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: .92rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: -.01em;
+    flex-shrink: 0;
+    transition: color .2s;
+  }
+  .nav.scrolled .nav-logo { color: var(--ink); }
+
+  .nav-logo-icon {
+    width: 28px; height: 28px;
+    background: rgba(59,130,246,.15);
+    border: 1px solid rgba(59,130,246,.3);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav.scrolled .nav-logo-icon {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .nav-links a {
+    font-size: .85rem;
+    font-weight: 500;
+    color: rgba(255,255,255,.65);
+    text-decoration: none;
+    transition: color .2s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; left: 0; right: 0;
+    height: 2px;
+    background: var(--blue);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform .2s;
+  }
+  .nav-links a:hover,
+  .nav-links a.active { color: #fff; }
+  .nav-links a.active::after { transform: scaleX(1); }
+  .nav.scrolled .nav-links a { color: var(--muted); }
+  .nav.scrolled .nav-links a:hover,
+  .nav.scrolled .nav-links a.active { color: var(--ink); }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-cta {
+    padding: 8px 18px;
+    background: var(--blue);
+    color: #fff;
+    border-radius: 8px;
+    font-size: .83rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background .2s, transform .15s;
+    white-space: nowrap;
+  }
+  .nav-cta:hover { background: #1d4ed8; transform: translateY(-1px); }
+
+  /* Burger */
+  .burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px; height: 36px;
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 0 8px;
+    transition: background .2s;
+  }
+  .nav.scrolled .burger {
+    background: #f1f5f9;
+    border-color: var(--border);
+  }
+  .burger span {
+    display: block;
+    height: 1.5px;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform .25s, opacity .2s;
+    transform-origin: center;
+  }
+  .nav.scrolled .burger span { background: var(--ink); }
+  .burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  /* Drawer */
+  .drawer {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10,15,26,.97);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    z-index: 190;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s;
+  }
+  .drawer.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .drawer a {
+    font-size: 1.9rem;
+    font-weight: 800;
+    letter-spacing: -.03em;
+    color: rgba(255,255,255,.6);
+    text-decoration: none;
+    padding: 8px 24px;
+    transition: color .15s;
+  }
+  .drawer a:hover { color: #fff; }
+  .drawer-cta {
+    margin-top: 24px;
+    padding: 14px 40px !important;
+    background: var(--blue) !important;
+    color: #fff !important;
+    border-radius: 12px;
+    font-size: 1rem !important;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: #f8fafc;
+    border-top: 1px solid var(--border);
+  }
+  .footer-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 48px 32px 32px;
+  }
+  .footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+  }
+  .footer-logo { color: var(--ink) !important; }
+  .footer-logo-icon {
+    background: #eff6ff !important;
+    border-color: #bfdbfe !important;
+  }
+  .footer-tag {
+    font-size: .78rem;
+    color: #94a3b8;
+    letter-spacing: .05em;
+    margin-top: 4px;
+  }
+  .footer-nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .footer-nav a {
+    font-size: .83rem;
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color .2s;
+  }
+  .footer-nav a:hover { color: var(--ink); }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-bottom p { font-size: .75rem; color: #94a3b8; }
+  .footer-links {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .footer-links a {
+    font-size: .75rem;
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color .2s;
+  }
+  .footer-links a:hover { color: var(--ink); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .nav { padding: 14px 20px; }
+    .nav.scrolled { padding: 10px 20px; }
+    .nav-links { display: none; }
+    .burger { display: flex; }
+    .drawer { display: flex; }
+    .footer-inner { padding: 40px 20px 28px; }
+    .footer-top { flex-direction: column; align-items: flex-start; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; }
+    .footer-nav { gap: 14px; }
+  }
+  @media (max-width: 560px) {
+    .nav { padding: 12px 16px; }
+    .nav-cta { display: none; }
+    .footer-inner { padding: 32px 16px 24px; }
+    .footer-nav { flex-direction: column; gap: 10px; }
+    .footer-links { gap: 12px; }
+  }
+</style>

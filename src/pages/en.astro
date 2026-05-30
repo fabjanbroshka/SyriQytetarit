@@ -1,0 +1,1524 @@
+---
+import '../styles/global.css';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Citizen's Eye — Report city problems in 30 seconds. Watch. Report. Change." />
+    <title>Citizen's Eye</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+
+    <!-- NAV -->
+    <header class="t-nav" id="tNav">
+      <div class="t-nav-inner">
+        <a href="#" class="t-logo">
+          <div class="t-logo-icon">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="21" stroke="#3b82f6" stroke-width="2.5"/>
+              <ellipse cx="24" cy="24" rx="9" ry="6.5" stroke="white" stroke-width="2"/>
+              <circle cx="24" cy="24" r="3" fill="#3b82f6"/>
+              <circle cx="24" cy="24" r="1.2" fill="white"/>
+            </svg>
+          </div>
+          <span>Citizen's Eye</span>
+        </a>
+        <nav class="t-nav-links">
+          <a href="#what">What</a>
+          <a href="#why">Why</a>
+          <a href="#how">How</a>
+          <a href="#who">For who</a>
+        </nav>
+        <div class="t-nav-right">
+          <a href="#who" class="t-nav-cta">Download</a>
+          <button class="t-hamburger" id="tHamburger" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="t-mobile-menu" id="tMobileMenu">
+      <nav class="t-mobile-links">
+        <a href="#what"  class="t-mobile-link">What is it?</a>
+        <a href="#why"   class="t-mobile-link">Why?</a>
+        <a href="#how"   class="t-mobile-link">How it works?</a>
+        <a href="#who"   class="t-mobile-link">For who?</a>
+      </nav>
+      <a href="#who" class="t-mobile-cta">Download the app</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="t-hero" id="hero">
+      <div class="t-hero-bg">
+        <div class="t-orb t-orb-1"></div>
+        <div class="t-orb t-orb-2"></div>
+        <div class="t-orb t-orb-3"></div>
+      </div>
+
+      <div class="t-hero-content">
+        <div class="t-hero-badge t-enter" style="--d:0.1s">
+          <span class="t-badge-dot"></span>
+          Now in development
+        </div>
+
+        <h1 class="t-hero-title t-enter" style="--d:0.25s">
+          <span class="t-title-line">Citizen's</span>
+          <span class="t-title-line t-title-accent">Eye.</span>
+        </h1>
+
+        <p class="t-hero-sub t-enter" style="--d:0.45s">An app for reporting city problems — like improper parking, damaged roads, pollution, and more.</p>
+
+        <div class="t-hero-tagline t-enter" style="--d:0.6s">
+          <span class="t-tag-word">Watch</span>
+          <svg class="t-tag-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <span class="t-tag-word">Report</span>
+          <svg class="t-tag-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <span class="t-tag-word">Change</span>
+        </div>
+
+        <div class="t-hero-actions t-enter" style="--d:0.8s">
+          <a href="#download" class="t-btn-store">
+            <svg width="22" height="22" viewBox="0 0 814 1000" fill="currentColor"><path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-57.8-155.5-127.4C46 376.8 0 246.4 0 121.2 0 56.9 20.2 14.2 60.3 14.2c35.3 0 68.7 21.1 95.7 21.1 37.1 0 83.3-22.4 127.3-22.4 45.1 0 104.1 16.1 140.4 68.5h1.9c-4.5-21.6-10.9-50.3-10.9-74.6 0-58.4 33.5-100.7 76-117.5 5.8 15.3 9.6 33.5 9.6 52.4 0 64.9-46.5 117.5-84.8 117.5h-1.9c3.8 23 47.2 58.4 93.5 58.4 35.3 0 65.5-18.2 91.3-44.5l15.4 8.7z"/></svg>
+            <div>
+              <span class="t-store-sub">Download on</span>
+              <span class="t-store-name">App Store</span>
+            </div>
+          </a>
+          <a href="#download" class="t-btn-store">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.32.18.68.24 1.04.17l11.3-11.3-2.98-2.98L3.18 23.76z"/><path d="M22.38 10.54l-3.03-1.72-3.35 3.35 3.35 3.35 3.04-1.73c.87-.49.87-1.76-.01-2.25z"/><path d="M1.26 1.1C1.1 1.36 1 1.67 1 2.02v19.96c0 .35.1.66.26.92l.1.1L13.54 10.8v-.29L1.36 1z"/><path d="M13.54 14.21l-2.17-2.17L1.26 22.97c.37.39.95.43 1.38.1l10.9-8.86z"/></svg>
+            <div>
+              <span class="t-store-sub">Get it on</span>
+              <span class="t-store-name">Google Play</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="t-hero-scroll t-enter" style="--d:1.1s">
+        <div class="t-scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- WHAT IS IT -->
+    <section class="t-section" id="what">
+      <div class="t-container">
+        <div class="t-section-header t-reveal">
+          <span class="t-label">What is it?</span>
+          <h2 class="t-heading">Report any city problem<br/>in under 30 seconds.</h2>
+        </div>
+
+        <div class="t-what-grid t-reveal">
+          <div class="t-what-card" style="--accent:#ef4444">
+            <div class="t-what-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <h3>Improper Parking</h3>
+            <p>Vehicles blocking sidewalks, crossings, fire hydrants, or disabled spaces.</p>
+          </div>
+          <div class="t-what-card" style="--accent:#f59e0b">
+            <div class="t-what-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l4-8 4 4 3-6 4 10"/><path d="M3 21h18"/></svg>
+            </div>
+            <h3>Damaged Roads</h3>
+            <p>Potholes, broken pavement, missing manhole covers, or unsafe surfaces.</p>
+          </div>
+          <div class="t-what-card" style="--accent:#10b981">
+            <div class="t-what-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1010 10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3>Pollution</h3>
+            <p>Illegal dumping, overflowing bins, water contamination, or air quality issues.</p>
+          </div>
+          <div class="t-what-card" style="--accent:#8b5cf6">
+            <div class="t-what-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            </div>
+            <h3>Broken Lighting</h3>
+            <p>Faulty streetlights, dark alleys, and public spaces that are unsafe at night.</p>
+          </div>
+          <div class="t-what-card" style="--accent:#3b82f6">
+            <div class="t-what-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h3>Sidewalk Blockage</h3>
+            <p>Obstructions making it impossible for pedestrians, cyclists, or wheelchair users to pass.</p>
+          </div>
+          <div class="t-what-card t-what-card-more" style="--accent:#64748b">
+            <div class="t-what-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            </div>
+            <h3>And more</h3>
+            <p>Any urban issue that affects public safety, hygiene, or quality of life in your city.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="t-section t-section-dark" id="why">
+      <div class="t-container">
+        <div class="t-why-layout">
+          <div class="t-why-left t-reveal">
+            <span class="t-label t-label-light">Why?</span>
+            <h2 class="t-heading t-heading-white">City problems go unsolved<br/>because they're invisible.</h2>
+            <p class="t-why-body">When a pothole appears or a streetlight breaks, most people notice it — but almost no one reports it. The problem stays undocumented. No data means no action.</p>
+            <p class="t-why-body">Citizen's Eye changes this. A 30-second report from your phone creates a structured data point that reaches the people who can actually fix it.</p>
+            <div class="t-why-stat-row">
+              <div class="t-why-stat">
+                <span class="t-stat-n">30s</span>
+                <span class="t-stat-l">to report</span>
+              </div>
+              <div class="t-why-div"></div>
+              <div class="t-why-stat">
+                <span class="t-stat-n">0</span>
+                <span class="t-stat-l">bureaucracy</span>
+              </div>
+              <div class="t-why-div"></div>
+              <div class="t-why-stat">
+                <span class="t-stat-n">100%</span>
+                <span class="t-stat-l">citizen-driven</span>
+              </div>
+            </div>
+          </div>
+          <div class="t-why-right t-reveal">
+            <div class="t-problem-flow">
+              <div class="t-flow-step t-flow-bad">
+                <div class="t-flow-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                </div>
+                <div>
+                  <p class="t-flow-title">Problem appears</p>
+                  <p class="t-flow-sub">Pothole, broken light, illegal parking...</p>
+                </div>
+              </div>
+              <div class="t-flow-connector t-flow-bad-line"></div>
+              <div class="t-flow-step t-flow-bad">
+                <div class="t-flow-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                </div>
+                <div>
+                  <p class="t-flow-title">Citizens notice it</p>
+                  <p class="t-flow-sub">Everyone sees it. Nobody reports it.</p>
+                </div>
+              </div>
+              <div class="t-flow-connector t-flow-bad-line"></div>
+              <div class="t-flow-step t-flow-bad">
+                <div class="t-flow-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+                </div>
+                <div>
+                  <p class="t-flow-title">Nothing happens</p>
+                  <p class="t-flow-sub">No data → no priority → no fix.</p>
+                </div>
+              </div>
+              <div class="t-flow-connector t-flow-good-line"></div>
+              <div class="t-flow-step t-flow-good">
+                <div class="t-flow-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div>
+                  <p class="t-flow-title">With Citizen's Eye</p>
+                  <p class="t-flow-sub">30s report → structured data → action.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="t-section" id="how">
+      <div class="t-container">
+        <div class="t-section-header t-reveal">
+          <span class="t-label">How it works?</span>
+          <h2 class="t-heading">Five steps.<br/>Thirty seconds.</h2>
+        </div>
+
+        <div class="t-how-grid">
+          <div class="t-how-step t-reveal" style="--si:0">
+            <div class="t-how-num">01</div>
+            <div class="t-how-visual t-how-v1">
+              <div class="t-hv-eye">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </div>
+            </div>
+            <h3>You see a problem</h3>
+            <p>Notice anything wrong in your street, neighborhood, or public space.</p>
+          </div>
+
+          <div class="t-how-step t-reveal" style="--si:1">
+            <div class="t-how-num">02</div>
+            <div class="t-how-visual t-how-v2">
+              <div class="t-hv-camera">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              </div>
+              <div class="t-hv-shutter"></div>
+            </div>
+            <h3>Take a photo or video</h3>
+            <p>Document the issue directly from your phone's camera in the app.</p>
+          </div>
+
+          <div class="t-how-step t-reveal" style="--si:2">
+            <div class="t-how-num">03</div>
+            <div class="t-how-visual t-how-v3">
+              <div class="t-hv-chips">
+                <span class="t-hv-chip t-hv-chip-on">Parking</span>
+                <span class="t-hv-chip">Road</span>
+                <span class="t-hv-chip">Pollution</span>
+              </div>
+            </div>
+            <h3>Choose the category</h3>
+            <p>Pick from a clear list of categories so your report is properly classified.</p>
+          </div>
+
+          <div class="t-how-step t-reveal" style="--si:3">
+            <div class="t-how-num">04</div>
+            <div class="t-how-visual t-how-v4">
+              <div class="t-hv-map">
+                <div class="t-hv-road-h"></div>
+                <div class="t-hv-road-v"></div>
+                <div class="t-hv-pin">
+                  <div class="t-hv-pin-dot"></div>
+                  <div class="t-hv-pin-pulse"></div>
+                </div>
+              </div>
+            </div>
+            <h3>Location is set automatically</h3>
+            <p>GPS pinpoints your exact location. You can also adjust it manually on the map.</p>
+          </div>
+
+          <div class="t-how-step t-reveal t-how-step-wide" style="--si:4">
+            <div class="t-how-num">05</div>
+            <div class="t-how-visual t-how-v5">
+              <div class="t-hv-sent">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                <div class="t-hv-sent-ring"></div>
+              </div>
+            </div>
+            <h3>Done — your report is sent</h3>
+            <p>Your report is submitted, verified, and tracked. You'll receive updates as the status changes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOR WHO -->
+    <section class="t-section t-section-dark t-section-who" id="who">
+      <div class="t-container">
+        <div class="t-who-layout t-reveal">
+          <div class="t-who-text">
+            <span class="t-label t-label-light">For who?</span>
+            <h2 class="t-heading t-heading-white">For every citizen<br/>who wants their<br/>city to improve.</h2>
+            <p class="t-who-body">No waiting. No bureaucracy. No need to know who to call. Just open the app, report what you see, and let the data do the work.</p>
+            <div class="t-who-pills">
+              <span class="t-pill">Commuters</span>
+              <span class="t-pill">Residents</span>
+              <span class="t-pill">Parents</span>
+              <span class="t-pill">Cyclists</span>
+              <span class="t-pill">Shop owners</span>
+              <span class="t-pill">Anyone</span>
+            </div>
+          </div>
+          <div class="t-who-cta">
+            <div class="t-cta-card">
+              <p class="t-cta-eyebrow">Be the first to know</p>
+              <h3 class="t-cta-title">Citizen's Eye<br/>is coming.</h3>
+              <p class="t-cta-sub">Leave your email and we'll notify you the moment it launches.</p>
+              <form class="t-cta-form" id="ctaForm">
+                <input type="email" placeholder="your@email.com" required class="t-cta-input" />
+                <button type="submit" class="t-cta-btn">Notify me</button>
+              </form>
+              <p class="t-cta-note">No spam. Unsubscribe anytime.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="t-footer">
+      <div class="t-container">
+        <div class="t-footer-inner">
+          <div class="t-footer-brand">
+            <div class="t-logo">
+              <div class="t-logo-icon">
+                <svg width="16" height="16" viewBox="0 0 48 48" fill="none">
+                  <circle cx="24" cy="24" r="21" stroke="#3b82f6" stroke-width="2.5"/>
+                  <ellipse cx="24" cy="24" rx="9" ry="6.5" stroke="white" stroke-width="2"/>
+                  <circle cx="24" cy="24" r="3" fill="#3b82f6"/>
+                  <circle cx="24" cy="24" r="1.2" fill="white"/>
+                </svg>
+              </div>
+              <span>Citizen's Eye</span>
+            </div>
+            <p class="t-footer-tag">Watch. Report. Change.</p>
+          </div>
+          <nav class="t-footer-links">
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+          </nav>
+        </div>
+        <div class="t-footer-bottom">
+          <p>&copy; 2025 Citizen's Eye. All rights reserved.</p>
+          <a href="/" class="t-footer-lang">Shqip (AL)</a>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
+
+<script>
+  // Form submit
+  const ctaForm = document.getElementById('ctaForm') as HTMLFormElement;
+  ctaForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = ctaForm.querySelector('button') as HTMLButtonElement;
+    const inp = ctaForm.querySelector('input') as HTMLInputElement;
+    btn.textContent = "You're on the list!";
+    btn.disabled = true;
+    inp.disabled = true;
+  });
+
+  // Scroll reveals
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const el = e.target as HTMLElement;
+        const si = el.style.getPropertyValue('--si');
+        const delay = si ? parseFloat(si) * 0.12 : 0;
+        el.style.animationDelay = delay + 's';
+        el.classList.add('t-revealed');
+        revealObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.t-reveal').forEach(el => revealObserver.observe(el));
+
+  // Nav scroll effect
+  const nav = document.querySelector('.t-nav') as HTMLElement;
+  window.addEventListener('scroll', () => {
+    nav?.classList.toggle('t-nav-scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  // Hamburger menu
+  const hamburger = document.getElementById('tHamburger') as HTMLButtonElement;
+  const mobileMenu = document.getElementById('tMobileMenu') as HTMLDivElement;
+
+  hamburger?.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('is-open');
+    hamburger.classList.toggle('is-open', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  // Close menu when a link is clicked
+  mobileMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('is-open');
+      hamburger.classList.remove('is-open');
+      document.body.style.overflow = '';
+    });
+  });
+</script>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #050a14;
+    --bg2: #0a1628;
+    --blue: #2563eb;
+    --blue-light: #3b82f6;
+    --white: #ffffff;
+    --muted: rgba(255,255,255,0.5);
+    --border: rgba(255,255,255,0.08);
+    --font: 'Inter', system-ui, sans-serif;
+    --r: 14px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--white);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ── KEYFRAMES ── */
+  @keyframes tEnter {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes tReveal {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes tOrbFloat1 {
+    0%,100% { transform: translate(0,0) scale(1); }
+    40%      { transform: translate(50px,-70px) scale(1.1); }
+    70%      { transform: translate(-30px,30px) scale(0.94); }
+  }
+  @keyframes tOrbFloat2 {
+    0%,100% { transform: translate(0,0); }
+    50%      { transform: translate(-60px,50px) scale(1.08); }
+  }
+  @keyframes tOrbFloat3 {
+    0%,100% { transform: translate(0,0); }
+    60%      { transform: translate(40px,-30px) scale(1.05); }
+  }
+  @keyframes tScrollPulse {
+    0%,100% { opacity: 0.5; transform: scaleY(1); }
+    50%      { opacity: 1; transform: scaleY(1.3); }
+  }
+  @keyframes tShimmer {
+    0%   { background-position: -200% center; }
+    100% { background-position:  200% center; }
+  }
+  @keyframes tPulse {
+    0%,100% { transform: translate(-50%,-50%) scale(0.5); opacity: 0.8; }
+    100%     { transform: translate(-50%,-50%) scale(2.8); opacity: 0; }
+  }
+  @keyframes tFlash {
+    0%,100% { opacity: 0; }
+    50%      { opacity: 0.5; }
+  }
+  @keyframes tGlow {
+    0%,100% { box-shadow: 0 0 0 0 rgba(37,99,235,0); }
+    50%      { box-shadow: 0 0 28px 6px rgba(37,99,235,0.35); }
+  }
+  @keyframes tSentRing {
+    from { transform: scale(0.5); opacity: 0.8; }
+    to   { transform: scale(2.5); opacity: 0; }
+  }
+
+  .t-enter {
+    opacity: 0;
+    animation: tEnter 0.9s cubic-bezier(0.16,1,0.3,1) var(--d,0s) forwards;
+  }
+
+  .t-reveal { opacity: 0; }
+  .t-revealed { animation: tReveal 0.85s cubic-bezier(0.16,1,0.3,1) forwards; }
+
+  /* ── NAV ── */
+  .t-nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 20px 40px;
+    transition: background 0.3s, backdrop-filter 0.3s, padding 0.3s;
+  }
+
+  .t-nav-scrolled {
+    background: rgba(5,10,20,0.85);
+    backdrop-filter: blur(20px);
+    padding: 14px 40px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .t-nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  .t-logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .t-logo-icon {
+    width: 30px;
+    height: 30px;
+    background: rgba(59,130,246,0.15);
+    border: 1px solid rgba(59,130,246,0.3);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .t-nav-links {
+    display: flex;
+    gap: 28px;
+  }
+
+  .t-nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .t-nav-links a:hover { color: var(--white); }
+
+  .t-nav-cta {
+    padding: 8px 20px;
+    background: var(--blue);
+    color: var(--white);
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .t-nav-cta:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+  }
+
+  /* ── HERO ── */
+  .t-hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 120px 24px 80px;
+    text-align: center;
+  }
+
+  .t-hero-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .t-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    will-change: transform;
+  }
+
+  .t-orb-1 {
+    width: 700px; height: 700px;
+    top: -200px; left: -200px;
+    background: radial-gradient(circle, rgba(29,78,216,0.5) 0%, transparent 65%);
+    animation: tOrbFloat1 20s ease-in-out infinite;
+  }
+
+  .t-orb-2 {
+    width: 500px; height: 500px;
+    top: 10%; right: -100px;
+    background: radial-gradient(circle, rgba(99,102,241,0.4) 0%, transparent 65%);
+    animation: tOrbFloat2 25s ease-in-out infinite;
+  }
+
+  .t-orb-3 {
+    width: 400px; height: 400px;
+    bottom: 0; left: 40%;
+    background: radial-gradient(circle, rgba(14,165,233,0.3) 0%, transparent 65%);
+    animation: tOrbFloat3 18s ease-in-out infinite;
+  }
+
+  .t-hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .t-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(37,99,235,0.12);
+    border: 1px solid rgba(37,99,235,0.3);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #93c5fd;
+    letter-spacing: 0.05em;
+    margin-bottom: 36px;
+  }
+
+  .t-badge-dot {
+    width: 6px; height: 6px;
+    background: #3b82f6;
+    border-radius: 50%;
+    animation: tFlash 2s ease-in-out infinite;
+  }
+
+  .t-hero-title {
+    font-size: clamp(4rem, 10vw, 8rem);
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    line-height: 0.95;
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .t-title-line { display: block; color: var(--white); }
+
+  .t-title-accent {
+    background: linear-gradient(90deg, #fff 0%, #93c5fd 25%, #fff 50%, #818cf8 75%, #fff 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: tShimmer 6s linear infinite;
+  }
+
+  .t-hero-sub {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--muted);
+    max-width: 500px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+    font-weight: 400;
+  }
+
+  .t-hero-tagline {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 44px;
+  }
+
+  .t-tag-word {
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .t-tag-arrow { color: rgba(255,255,255,0.3); flex-shrink: 0; }
+
+  .t-hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .t-btn-store {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 13px 22px;
+    background: rgba(255,255,255,0.07);
+    border: 1.5px solid rgba(255,255,255,0.15);
+    border-radius: 13px;
+    color: var(--white);
+    text-decoration: none;
+    backdrop-filter: blur(8px);
+    transition: all 0.2s;
+    animation: tGlow 3.5s ease-in-out 1.5s infinite;
+  }
+
+  .t-btn-store:hover {
+    background: rgba(255,255,255,0.13);
+    border-color: rgba(255,255,255,0.35);
+    transform: translateY(-2px);
+    animation: none;
+    box-shadow: 0 8px 32px rgba(59,130,246,0.35);
+  }
+
+  .t-store-sub {
+    display: block;
+    font-size: 0.62rem;
+    opacity: 0.65;
+    font-weight: 400;
+  }
+
+  .t-store-name {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .t-hero-scroll {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .t-scroll-line {
+    width: 1.5px;
+    height: 48px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
+    border-radius: 2px;
+    animation: tScrollPulse 2.5s ease-in-out infinite;
+    transform-origin: top;
+  }
+
+  /* ── SHARED SECTION STYLES ── */
+  .t-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .t-section { padding: 110px 0; }
+  .t-section-dark { background: #070e1e; }
+
+  .t-label {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--blue-light);
+    margin-bottom: 16px;
+  }
+
+  .t-label-light { color: rgba(147,197,253,0.7); }
+
+  .t-heading {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: var(--bg);
+    margin-bottom: 24px;
+  }
+
+  .t-heading-white { color: var(--white); }
+
+  .t-section-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .t-section-header .t-heading { color: var(--bg); }
+
+  /* ── WHAT GRID ── */
+  .t-what-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .t-what-card {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: 28px;
+    border-top: 3px solid var(--accent, #3b82f6);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .t-what-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+  }
+
+  .t-what-card-more {
+    background: #f8fafc;
+  }
+
+  .t-what-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(0,0,0,0.05);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    color: var(--accent, #3b82f6);
+  }
+
+  .t-what-card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 8px;
+  }
+
+  .t-what-card p {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.65;
+  }
+
+  /* ── WHY ── */
+  .t-why-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .t-why-body {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .t-why-stat-row {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+  }
+
+  .t-why-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .t-stat-n {
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    color: var(--white);
+  }
+
+  .t-stat-l {
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .t-why-div {
+    width: 1px;
+    height: 40px;
+    background: var(--border);
+  }
+
+  /* Problem flow */
+  .t-problem-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .t-flow-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 18px 20px;
+    border-radius: 12px;
+  }
+
+  .t-flow-bad {
+    background: rgba(239,68,68,0.06);
+    border: 1px solid rgba(239,68,68,0.12);
+    margin-bottom: 2px;
+  }
+
+  .t-flow-good {
+    background: rgba(16,185,129,0.08);
+    border: 1px solid rgba(16,185,129,0.2);
+    margin-top: 8px;
+  }
+
+  .t-flow-connector {
+    width: 1px;
+    height: 20px;
+    margin-left: 29px;
+  }
+
+  .t-flow-bad-line { background: rgba(239,68,68,0.3); }
+  .t-flow-good-line { background: rgba(16,185,129,0.3); }
+
+  .t-flow-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .t-flow-bad .t-flow-icon {
+    background: rgba(239,68,68,0.15);
+    color: #ef4444;
+  }
+
+  .t-flow-good .t-flow-icon {
+    background: rgba(16,185,129,0.15);
+    color: #10b981;
+  }
+
+  .t-flow-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 2px;
+  }
+
+  .t-flow-sub {
+    font-size: 0.75rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* ── HOW IT WORKS ── */
+  .t-how-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .t-how-step-wide { grid-column: span 2; }
+
+  .t-how-step {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 28px 24px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .t-how-step:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 48px rgba(0,0,0,0.12);
+  }
+
+  .t-how-num {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: var(--blue-light);
+    margin-bottom: 20px;
+    opacity: 0.7;
+  }
+
+  .t-how-visual {
+    height: 80px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .t-how-v1 { background: linear-gradient(135deg, #0f172a, #1e3a5f); }
+  .t-how-v2 { background: linear-gradient(135deg, #1a1a2e, #0f172a); }
+  .t-how-v3 { background: linear-gradient(135deg, #0a1628, #1e293b); }
+  .t-how-v4 { background: #e8f0e4; }
+  .t-how-v5 { background: linear-gradient(135deg, #0f172a, #1e3a5f); }
+
+  .t-how-step h3 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 8px;
+  }
+
+  .t-how-step p {
+    font-size: 0.8rem;
+    color: #64748b;
+    line-height: 1.65;
+  }
+
+  /* How visual elements */
+  .t-hv-eye { color: white; }
+
+  .t-hv-camera { color: white; z-index: 1; }
+
+  .t-hv-shutter {
+    position: absolute;
+    inset: 0;
+    background: white;
+    opacity: 0;
+    animation: tFlash 3s ease-in-out 1s infinite;
+  }
+
+  .t-hv-chips {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 12px;
+  }
+
+  .t-hv-chip {
+    padding: 4px 10px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 100px;
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.7);
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .t-hv-chip-on {
+    background: rgba(37,99,235,0.5);
+    border-color: rgba(59,130,246,0.5);
+    color: white;
+  }
+
+  .t-hv-map {
+    position: absolute;
+    inset: 0;
+  }
+
+  .t-hv-road-h {
+    position: absolute;
+    top: 50%; left: 0; right: 0;
+    height: 8px;
+    background: #d4e2ce;
+    transform: translateY(-50%);
+  }
+
+  .t-hv-road-v {
+    position: absolute;
+    left: 50%; top: 0; bottom: 0;
+    width: 8px;
+    background: #d4e2ce;
+    transform: translateX(-50%);
+  }
+
+  .t-hv-pin {
+    position: absolute;
+    top: 38%;
+    left: 55%;
+    z-index: 2;
+  }
+
+  .t-hv-pin-dot {
+    width: 14px;
+    height: 14px;
+    background: #ef4444;
+    border-radius: 50% 50% 50% 0;
+    transform: translate(-50%, -100%) rotate(-45deg);
+    border: 2px solid white;
+  }
+
+  .t-hv-pin-pulse {
+    position: absolute;
+    top: -7px;
+    left: -3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(239,68,68,0.3);
+    animation: tPulse 2s ease-out infinite;
+  }
+
+  .t-hv-sent { position: relative; }
+  .t-hv-sent-ring {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 40px; height: 40px;
+    border: 1.5px solid rgba(59,130,246,0.5);
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    animation: tSentRing 2s ease-out infinite;
+  }
+
+  /* ── FOR WHO ── */
+  .t-section-who {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .t-section-who::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(59,130,246,0.3), transparent);
+  }
+
+  .t-who-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .t-who-body {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 28px;
+  }
+
+  .t-who-pills {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .t-pill {
+    padding: 6px 14px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.7);
+    font-weight: 500;
+  }
+
+  /* CTA Card */
+  .t-cta-card {
+    background: linear-gradient(135deg, #0f172a, #1e3a5f);
+    border: 1px solid rgba(59,130,246,0.2);
+    border-radius: 24px;
+    padding: 40px 36px;
+    box-shadow: 0 0 80px rgba(37,99,235,0.12);
+  }
+
+  .t-cta-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(147,197,253,0.7);
+    margin-bottom: 12px;
+  }
+
+  .t-cta-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  .t-cta-sub {
+    font-size: 0.875rem;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+
+  .t-cta-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .t-cta-input {
+    padding: 13px 16px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 0.9rem;
+    font-family: var(--font);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .t-cta-input::placeholder { color: rgba(255,255,255,0.35); }
+  .t-cta-input:focus { border-color: rgba(59,130,246,0.6); }
+
+  .t-cta-btn {
+    padding: 13px;
+    background: var(--blue);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: var(--font);
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .t-cta-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+  }
+
+  .t-cta-note {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.3);
+    text-align: center;
+    margin-top: 6px;
+  }
+
+  /* ── FOOTER ── */
+  .t-footer {
+    background: #030710;
+    padding: 48px 0 32px;
+    border-top: 1px solid var(--border);
+  }
+
+  .t-footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .t-footer-tag {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.3);
+    margin-top: 6px;
+    letter-spacing: 0.05em;
+  }
+
+  .t-footer-links {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .t-footer-links a {
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s;
+  }
+
+  .t-footer-links a:hover { color: var(--white); }
+
+  .t-footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+
+  .t-footer-bottom p {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.25);
+  }
+
+  .t-footer-lang {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.35);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    padding: 4px 10px;
+    border-radius: 6px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .t-footer-lang:hover { color: var(--white); border-color: rgba(255,255,255,0.2); }
+
+  /* ── HAMBURGER & MOBILE MENU ── */
+  .t-nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .t-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 0 9px;
+  }
+
+  .t-hamburger span {
+    display: block;
+    height: 1.5px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: transform 0.25s, opacity 0.25s;
+    transform-origin: center;
+  }
+
+  .t-hamburger.is-open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .t-hamburger.is-open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .t-hamburger.is-open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  .t-mobile-menu {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(5,10,20,0.97);
+    backdrop-filter: blur(20px);
+    z-index: 90;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .t-mobile-menu.is-open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .t-mobile-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 40px;
+  }
+
+  .t-mobile-link {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    padding: 10px 24px;
+    transition: color 0.2s;
+  }
+
+  .t-mobile-link:hover { color: var(--white); }
+
+  .t-mobile-cta {
+    padding: 14px 40px;
+    background: var(--blue);
+    color: var(--white);
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .t-mobile-cta:hover { background: #1d4ed8; }
+
+  /* ── TABLET (≤ 900px) ── */
+  @media (max-width: 900px) {
+    .t-nav { padding: 16px 20px; }
+    .t-nav-links { display: none; }
+    .t-hamburger { display: flex; }
+
+    .t-section { padding: 80px 0; }
+    .t-container { padding: 0 20px; }
+
+    /* Hero */
+    .t-hero { padding: 100px 20px 72px; }
+    .t-hero-tagline { gap: 8px; }
+    .t-tag-word { font-size: 0.85rem; }
+    .t-hero-actions { gap: 12px; }
+
+    /* What */
+    .t-what-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .t-section-header { margin-bottom: 48px; }
+
+    /* Why */
+    .t-why-layout { grid-template-columns: 1fr; gap: 48px; }
+    .t-why-stat-row { gap: 24px; }
+
+    /* How */
+    .t-how-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .t-how-step-wide { grid-column: span 2; }
+
+    /* Who */
+    .t-who-layout { grid-template-columns: 1fr; gap: 48px; }
+    .t-cta-card { padding: 32px 28px; }
+
+    /* Footer */
+    .t-footer-inner { flex-direction: column; align-items: flex-start; gap: 24px; }
+    .t-footer-links { gap: 16px; }
+    .t-footer-bottom { flex-direction: column; align-items: flex-start; gap: 10px; }
+  }
+
+  /* ── MOBILE (≤ 600px) ── */
+  @media (max-width: 600px) {
+    .t-nav { padding: 14px 16px; }
+    .t-nav-cta { display: none; }
+
+    .t-section { padding: 64px 0; }
+    .t-container { padding: 0 16px; }
+
+    /* Hero */
+    .t-hero { padding: 90px 16px 64px; min-height: auto; padding-bottom: 80px; }
+    .t-hero-badge { font-size: 0.68rem; padding: 5px 13px; }
+    .t-hero-title { font-size: clamp(2.8rem, 14vw, 4.5rem); margin-bottom: 20px; }
+    .t-hero-sub { font-size: 0.95rem; margin-bottom: 22px; }
+    .t-hero-tagline { gap: 6px; flex-wrap: wrap; justify-content: center; margin-bottom: 32px; }
+    .t-tag-word { font-size: 0.78rem; }
+    .t-tag-arrow { width: 16px; height: 16px; }
+    .t-hero-actions { flex-direction: column; align-items: stretch; gap: 10px; width: 100%; max-width: 320px; }
+    .t-btn-store { justify-content: center; padding: 14px 20px; }
+
+    /* What */
+    .t-what-grid { grid-template-columns: 1fr; gap: 12px; }
+    .t-what-card { padding: 22px 20px; }
+    .t-section-header { margin-bottom: 36px; }
+    .t-heading { font-size: clamp(1.7rem, 7vw, 2.4rem); }
+
+    /* Why */
+    .t-why-stat-row { flex-wrap: wrap; gap: 20px; padding-top: 24px; margin-top: 28px; }
+    .t-why-div { display: none; }
+    .t-stat-n { font-size: 1.6rem; }
+    .t-flow-step { padding: 14px 16px; gap: 12px; }
+    .t-flow-icon { width: 32px; height: 32px; flex-shrink: 0; }
+    .t-flow-connector { margin-left: 23px; }
+
+    /* How */
+    .t-how-grid { grid-template-columns: 1fr; gap: 12px; }
+    .t-how-step-wide { grid-column: span 1; }
+    .t-how-step { padding: 22px 20px; }
+    .t-how-visual { height: 70px; }
+
+    /* Who */
+    .t-who-layout { gap: 36px; }
+    .t-cta-card { padding: 28px 20px; border-radius: 18px; }
+    .t-cta-title { font-size: 1.5rem; }
+    .t-who-pills { gap: 6px; }
+    .t-pill { font-size: 0.75rem; padding: 5px 12px; }
+
+    /* Footer */
+    .t-footer { padding: 36px 0 24px; }
+    .t-footer-links { flex-direction: column; gap: 12px; }
+    .t-footer-links a { font-size: 0.9rem; }
+    .t-footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
+  }
+
+  /* ── SMALL MOBILE (≤ 380px) ── */
+  @media (max-width: 380px) {
+    .t-hero-title { font-size: clamp(2.4rem, 13vw, 3.5rem); }
+    .t-hero-badge { font-size: 0.62rem; }
+    .t-what-card { padding: 18px 16px; }
+    .t-cta-card { padding: 22px 16px; }
+    .t-mobile-link { font-size: 1.6rem; }
+  }
+</style>
