@@ -18,7 +18,7 @@ if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
 $to      = 'info@syriqytetarit.al';
 $subject = 'Regjistrim i ri - Syri Qytetarit';
 $body    = "Email i ri nga lista e pritjes:\n\n" . $email;
-$headers = "From: noreply@syriqytetarit.al\r\nReply-To: " . $email;
+$headers = "From: info@syriqytetarit.al\r\nReply-To: " . $email;
 
 $sent = mail($to, $subject, $body, $headers);
 
